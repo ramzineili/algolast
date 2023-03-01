@@ -1,0 +1,14 @@
+FUNCTION palindrome(mot:STRING) : BOOLEAN
+VAR
+resultat:BOOLEAN
+BEGIN
+    IF (mot.length<=1) THEN
+        RETURN true
+    END_IF
+    IF (mot[0]<>mot[mot.length]) THEN
+        RETURN false
+    END_IF
+    mot:=mot[1,mot.length-1]
+    relultat:=palindrome (mot)
+    RETURN palindrome
+END
